@@ -12,7 +12,23 @@ class LessonItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-      child: Text(lesson.title),
+      margin: const EdgeInsets.all(10.0),
+      child: Padding(
+        padding: const EdgeInsets.symmetric(
+          vertical: 20.0,
+          horizontal: 10.0,
+        ),
+        child: ListTile(
+          title: Text(
+            lesson.title,
+            style: Theme.of(context).textTheme.titleMedium,
+          ),
+          trailing: CircleAvatar(
+            radius: 20,
+            child: Text(lesson.level),
+          ),
+        ),
+      ),
     );
   }
 }
