@@ -1,6 +1,6 @@
 import 'package:benjola_app/models/lesson.dart';
 
-const lessons = [
+const List<Lesson> lessons = [
   Lesson(
     "Alphabets",
     "La langue serbe possède 2 alphabets : l'alphabet cyrillique et l'alphabet latin.",
