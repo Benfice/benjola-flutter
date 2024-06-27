@@ -13,9 +13,9 @@ class LessonScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Lesson'),
+        title: Text(lesson.title),
       ),
-      body: const Text('Lesson content'),
+      body: Text(lesson.content),
     );
   }
 }
