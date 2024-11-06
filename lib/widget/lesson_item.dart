@@ -31,7 +31,7 @@ class LessonItem extends StatelessWidget {
             ),
             trailing: CircleAvatar(
               radius: 20,
-              child: Text(lesson.level),
+              child: Text(lesson.level.title),
             ),
           ),
         ),

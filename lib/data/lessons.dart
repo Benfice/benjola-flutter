@@ -4,11 +4,11 @@ const List<Lesson> lessons = [
   Lesson(
     "Alphabets",
     "La langue serbe possède 2 alphabets : l'alphabet cyrillique et l'alphabet latin.",
-    "A1",
+    Level.a1,
   ),
   Lesson(
     "Son",
     "En serbe, une lettre correspond à un son et un son à une lettre.",
-    "A1",
+    Level.a1,
   ),
 ];

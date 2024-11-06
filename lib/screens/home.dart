@@ -1,12 +1,21 @@
 import 'package:benjola_app/models/lesson.dart';
 import 'package:benjola_app/providers/lessons_provider.dart';
 import 'package:benjola_app/screens/lesson_content.dart';
+import 'package:benjola_app/screens/new_lesson.dart';
 import 'package:benjola_app/widget/lesson_item.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 class HomeScreen extends ConsumerWidget {
   const HomeScreen({super.key});
+
+  void addLesson(BuildContext context) {
+    Navigator.of(context).push(
+      MaterialPageRoute(
+        builder: (ctx) => const NewLessonScreen(),
+      ),
+    );
+  }
 
   void selectLesson(BuildContext context, Lesson lesson) {
     Navigator.of(context).push(
@@ -40,6 +49,12 @@ class HomeScreen extends ConsumerWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Benjola'),
+        actions: [
+          IconButton(
+            onPressed: () => addLesson(context),
+            icon: const Icon(Icons.add),
+          ),
+        ],
       ),
       body: content,
     );
